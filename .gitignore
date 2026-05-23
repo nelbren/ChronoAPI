@@ -1,0 +1,47 @@
+# ====================================================================
+# Gitignore Standard para Proyectos Python (FastAPI) y Editores Comunes
+# ====================================================================
+
+# --- Entornos Virtuales ---
+.venv/
+venv/
+env/
+ENV/
+lib/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Archivos de Caché y Compilación de Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Logs del Sistema y Aplicación ---
+*.log
+logs/
+
+# --- Configuraciones de Editores e IDEs ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# --- Archivos del Sistema Operativo ---
+.DS_Store
+Thumbs.db
+
+# --- Carpetas temporales y de compilación ---
+build/
+dist/
+*.egg-info/

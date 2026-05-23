@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoAPI - Dashboard</title>
+    
+    <!-- Google Fonts: Outfit for modern UI, Fira Code for code snippets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #080c14;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --accent-pink: #ec4899;
+            --accent-success: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ambient Glowing Background Elements */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            filter: blur(130px);
+            z-index: -1;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        body::before {
+            background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
+            top: 15%;
+            left: 15%;
+            animation: floatGlow1 18s infinite alternate ease-in-out;
+        }
+
+        body::after {
+            background: radial-gradient(circle, var(--accent-pink) 0%, transparent 70%);
+            bottom: 15%;
+            right: 15%;
+            animation: floatGlow2 18s infinite alternate ease-in-out;
+        }
+
+        @keyframes floatGlow1 {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(80px, 50px) scale(1.15); }
+        }
+
+        @keyframes floatGlow2 {
+            0% { transform: translate(0, 0) scale(1.15); }
+            100% { transform: translate(-80px, -50px) scale(0.9); }
+        }
+
+        /* Navigation Header */
+        header {
+            background: rgba(8, 12, 20, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 1.2rem 2.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.15rem;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .btn-nav {
+            text-decoration: none;
+            padding: 0.55rem 1.1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-swagger {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-swagger:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-redoc {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+        }
+
+        .btn-redoc:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Centered Layout Wrapper */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6rem 2rem 2rem 2rem;
+            min-height: 100vh;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Glassmorphic Centered Dashboard Card */
+        .dashboard-container {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 32px;
+            width: 100%;
+            max-width: 680px;
+            padding: 3rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.2rem;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.5s ease;
+        }
+
+        /* Active Glow Border State based on active query type */
+        .dashboard-container.active-date { border-color: rgba(139, 92, 246, 0.35); box-shadow: 0 20px 50px rgba(139, 92, 246, 0.15); }
+        .dashboard-container.active-time { border-color: rgba(59, 130, 246, 0.35); box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15); }
+        .dashboard-container.active-timestamp { border-color: rgba(236, 72, 153, 0.35); box-shadow: 0 20px 50px rgba(236, 72, 153, 0.15); }
+
+        .dashboard-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.7px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dashboard-header p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            max-width: 450px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* 3 Main Centered Buttons Group */
+        .buttons-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .btn-query {
+            flex: 1;
+            min-width: 140px;
+            max-width: 180px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            padding: 1rem 1.2rem;
+            border-radius: 18px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+        }
+
+        /* Specific Button Themes on Hover & Active */
+        .btn-date:hover, .btn-date.active {
+            background: rgba(139, 92, 246, 0.12);
+            border-color: var(--accent-purple);
+            color: #c4b5fd;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .btn-time:hover, .btn-time.active {
+            background: rgba(59, 130, 246, 0.12);
+            border-color: var(--accent-blue);
+            color: #93c5fd;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .btn-timestamp:hover, .btn-timestamp.active {
+            background: rgba(236, 72, 153, 0.12);
+            border-color: var(--accent-pink);
+            color: #fbcfe8;
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .btn-query svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+            opacity: 0.8;
+        }
+
+        .btn-query .btn-badge {
+            font-size: 0.7rem;
+            font-family: 'Fira Code', monospace;
+            opacity: 0.65;
+            font-weight: 400;
+        }
+
+        /* Displays (Current Output) Section */
+        .display-panel {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            align-items: center;
+            min-height: 240px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .display-title {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .display-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-feature-settings: "tnum";
+            word-break: break-all;
+        }
+
+        .value-placeholder {
+            color: var(--text-secondary);
+            font-weight: 400;
+            opacity: 0.4;
+            font-size: 1.8rem;
+        }
+
+        .color-date { color: #c4b5fd; text-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+        .color-time { color: #93c5fd; text-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+        .color-timestamp { color: #fbcfe8; text-shadow: 0 0 20px rgba(236, 72, 153, 0.3); }
+
+        /* JSON response viewer */
+        .json-viewer {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .json-label {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .json-block {
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 0.9rem 1.2rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.82rem;
+            overflow-x: auto;
+            color: #34d399; /* Emerald Green JSON response styling */
+            line-height: 1.4;
+        }
+
+        /* Footer info */
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            background: rgba(8, 12, 20, 0.3);
+        }
+
+        footer span {
+            color: var(--accent-purple);
+            font-weight: 600;
+        }
+
+        /* Adaptive Styles */
+        @media (max-width: 600px) {
+            .dashboard-container {
+                padding: 2rem 1.5rem;
+                gap: 1.8rem;
+            }
+            .dashboard-header h2 {
+                font-size: 1.8rem;
+            }
+            .buttons-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn-query {
+                max-width: none;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0.9rem;
+            }
+            .display-value {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">C</div>
+            <div class="logo-title">ChronoAPI</div>
+        </div>
+        <div class="nav-links">
+            <a href="/docs" target="_blank" class="btn-nav btn-swagger">
+                Swagger UI Docs
+            </a>
+            <a href="/redoc" target="_blank" class="btn-nav btn-redoc">
+                ReDoc Docs
+            </a>
+        </div>
+    </header>
+
+    <!-- Centered Dashboard Workspace -->
+    <main>
+        <div class="dashboard-container" id="dashboardCard">
+            
+            <!-- Dashboard Info -->
+            <div class="dashboard-header">
+                <h2>Servicio de Tiempo FastAPI</h2>
+                <p>Haz clic en cualquiera de los botones centrados a continuación para consultar y visualizar los datos provistos por cada endpoint en tiempo real.</p>
+            </div>
+
+            <!-- The 3 Buttons Centered (Horizontal & Vertical alignment in flex-grid) -->
+            <div class="buttons-group">
+                
+                <!-- Date Button -->
+                <button class="btn-query btn-date" id="btnDate">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                    </svg>
+                    <span>Consultar Fecha</span>
+                    <span class="btn-badge">/api/date</span>
+                </button>
+
+                <!-- Time Button -->
+                <button class="btn-query btn-time" id="btnTime">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                    </svg>
+                    <span>Consultar Hora</span>
+                    <span class="btn-badge">/api/time</span>
+                </button>
+
+                <!-- Timestamp Button -->
+                <button class="btn-query btn-timestamp" id="btnTimestamp">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 12h-2v3h-3v2h5v-5zM7 9h3V7H5v5h2V9zm14-6H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14z"/>
+                    </svg>
+                    <span>Consultar Timestamp</span>
+                    <span class="btn-badge">/api/timestamp</span>
+                </button>
+
+            </div>
+
+            <!-- Dynamic Outputs Panel -->
+            <div class="display-panel">
+                <div class="display-title" id="displayTitle">Endpoint No Consultado</div>
+                <div class="display-value value-placeholder" id="displayValue">Selecciona una consulta</div>
+                
+                <!-- Code JSON View -->
+                <div class="json-viewer" id="jsonViewer" style="display: none;">
+                    <span class="json-label">Respuesta JSON Cruda</span>
+                    <pre class="json-block"><code id="jsonResponse">{}</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Construido con FastAPI y Estilo Glassmorphism 💜
+    </footer>
+
+    <!-- Logic script -->
+    <script>
+        const btnDate = document.getElementById('btnDate');
+        const btnTime = document.getElementById('btnTime');
+        const btnTimestamp = document.getElementById('btnTimestamp');
+        
+        const dashboardCard = document.getElementById('dashboardCard');
+        const displayTitle = document.getElementById('displayTitle');
+        const displayValue = document.getElementById('displayValue');
+        const jsonViewer = document.getElementById('jsonViewer');
+        const jsonResponse = document.getElementById('jsonResponse');
+
+        // Reset active states on buttons and dashboard card
+        function resetStates() {
+            btnDate.classList.remove('active');
+            btnTime.classList.remove('active');
+            btnTimestamp.classList.remove('active');
+            
+            dashboardCard.classList.remove('active-date', 'active-time', 'active-timestamp');
+            
+            displayValue.classList.remove('color-date', 'color-time', 'color-timestamp', 'value-placeholder');
+        }
+
+        // Main fetch handler
+        async function fetchTimeData(endpoint, titleText, colorClass, activeClass, buttonEl, responseKey) {
+            resetStates();
+            
+            // Apply active button styles
+            buttonEl.classList.add('active');
+            dashboardCard.classList.add(activeClass);
+            
+            try {
+                displayTitle.innerText = `Consultando ${endpoint}...`;
+                const response = await fetch(endpoint);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    const value = data[responseKey];
+                    
+                    // Display text updates
+                    displayTitle.innerText = `Resultado de: ${endpoint}`;
+                    displayValue.innerText = value;
+                    displayValue.classList.add(colorClass);
+                    
+                    // JSON Display update
+                    jsonViewer.style.display = 'flex';
+                    jsonResponse.innerText = JSON.stringify(data, null, 2);
+                } else {
+                    displayTitle.innerText = `Error al consultar ${endpoint}`;
+                    displayValue.innerText = "Error de Servidor";
+                    displayValue.classList.add('value-placeholder');
+                    jsonViewer.style.display = 'none';
+                }
+            } catch (error) {
+                displayTitle.innerText = `Error de Conexión`;
+                displayValue.innerText = "Error de Red";
+                displayValue.classList.add('value-placeholder');
+                jsonViewer.style.display = 'none';
+                console.error(error);
+            }
+        }
+
+        // Add event listeners to the centered buttons
+        btnDate.addEventListener('click', () => {
+            fetchTimeData('/api/date', 'Fecha Actual', 'color-date', 'active-date', btnDate, 'date');
+        });
+
+        btnTime.addEventListener('click', () => {
+            fetchTimeData('/api/time', 'Hora Actual', 'color-time', 'active-time', btnTime, 'time');
+        });
+
+        btnTimestamp.addEventListener('click', () => {
+            fetchTimeData('/api/timestamp', 'Marca de Tiempo Completa', 'color-timestamp', 'active-timestamp', btnTimestamp, 'timestamp');
+        });
+    </script>
+</body>
+</html>
