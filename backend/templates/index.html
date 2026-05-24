@@ -159,6 +159,17 @@
             box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
         }
 
+        .btn-historial {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+            color: white;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+        }
+
+        .btn-historial:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+        }
+
         /* Centered Layout Wrapper */
         main {
             flex: 1;
@@ -413,6 +424,9 @@
             <div class="logo-title">ChronoAPI</div>
         </div>
         <div class="nav-links">
+            <a href="/historial/" target="_blank" class="btn-nav btn-historial">
+                Historial de Chats
+            </a>
             <a href="/docs" target="_blank" class="btn-nav btn-swagger">
                 Swagger UI Docs
             </a>

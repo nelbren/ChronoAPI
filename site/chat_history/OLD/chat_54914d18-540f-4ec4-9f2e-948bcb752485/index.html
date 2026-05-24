@@ -1,0 +1,1324 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación oficial, planes de desarrollo e historial completo de conversaciones de ChronoAPI.">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>💬 Confirmación de Ruta de Proyecto - ChronoAPI - Historial y Planes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#confirmacion-de-ruta-de-proyecto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="ChronoAPI - Historial y Planes" class="md-header__button md-logo" aria-label="ChronoAPI - Historial y Planes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ChronoAPI - Historial y Planes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              💬 Confirmación de Ruta de Proyecto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="light-blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ChronoAPI - Historial y Planes" class="md-nav__button md-logo" aria-label="ChronoAPI - Historial y Planes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ChronoAPI - Historial y Planes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Centro de Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../readme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del Proyecto (README)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../walkthrough/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Reorganización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plan/implementation_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan de Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historial de Chats
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Historial de Chats
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice del Historial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_5d102ccd-506f-4d7d-91e4-407b702c9c34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. Creación de Endpoints FastAPI (Date & Time)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_54914d18-540f-4ec4-9f2e-948bcb752485/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Confirmación de Ruta de Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_666388ec-2b15-4bc8-aa6e-984b2c199347/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Documentación de Chats en Markdown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_9d27139b-6121-4bb1-9c52-12f9ed7dd4d7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04. Readecuación de Scripts a scripts/backend/win
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_d8101e01-0b19-43ad-a09c-25d998f9ff89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05. Exportador de Conversaciones Multi-Plataforma e Incremental
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_aa9ab4f1-96a6-43e7-ba12-1c3dd0e095d8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06. export_conversations.py se encuentra dentro de scripts, me gustaria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_fae0d6a4-41b7-4c17-bff1-8189097bd94e/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07. [{
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_d5e98b54-b2d7-40a0-bbc1-e510a1053460/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08. Probando la inclusión de imagenes en la exportación de los chats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_a22ce375-ccd2-44fe-a93d-7745919e0b21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09. Probando la inclusión de imagenes en la exportación de los chats (v2)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_123652e4-555d-46d7-bdd9-2e3a79ebeb87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Probando la inclusión de imagenes en la exportación de los chats (C
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_007bed24-aec7-404c-9ffb-7ed163d77ad8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. No esta funcionando la exportación de los chats que tienen imagenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_8f4865c5-9272-4dae-be09-d0f596a5971f/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Una ultima prueba en la inclusión de imagenes en el chat. 😎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_2f03faaf-fcd4-459f-b35b-d46f6b42a24c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Este proyecto muestra unas apis y documentación de las apis, existe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_51c330ca-76bf-4606-abf6-85569b32f204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Crea un README.md para el proyecto, en donde se indiquen los pasos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat_81371e1d-a1cd-4295-bd1d-8e28ef5b051c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Realiza estos fixes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-2026-05-23-020102-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👤 Usuario (2026-05-23 02:01:02 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-020105-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:01:05 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-2026-05-23-020257-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👤 Usuario (2026-05-23 02:02:57 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-020307-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:03:07 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-2026-05-23-020441-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👤 Usuario (2026-05-23 02:04:41 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-020508-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:05:08 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-020629-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:06:29 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-020635-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:06:35 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-2026-05-23-020811-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👤 Usuario (2026-05-23 02:08:11 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-020836-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:08:36 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 Antigravity AI (2026-05-23 02:08:36 (America/Tegucigalpa))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#causa-del-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Causa del error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-implementada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución Implementada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-2026-05-23-021036-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👤 Usuario (2026-05-23 02:10:36 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-021050-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:10:50 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 Antigravity AI (2026-05-23 02:10:50 (America/Tegucigalpa))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-1-nuevo-boton-en-el-dashboard-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Método 1: Nuevo botón en el Dashboard (Recomendado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-2-enlace-cruzado-dentro-de-swagger-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Método 2: Enlace cruzado dentro de Swagger UI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalles-del-codigo-editado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalles del Código Editado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-2026-05-23-021327-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👤 Usuario (2026-05-23 02:13:27 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antigravity-ai-2026-05-23-021333-americategucigalpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤖 Antigravity AI (2026-05-23 02:13:33 (America/Tegucigalpa))
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="confirmacion-de-ruta-de-proyecto">💬 Confirmación de Ruta de Proyecto</h1>
+<blockquote>
+<p><strong>ID de Conversación:</strong> <code>54914d18-540f-4ec4-9f2e-948bcb752485</code></p>
+<p><strong>Descripción:</strong> Confirmar la ruta de inicio actual del proyecto ChronoAPI y verificar la estructura del entorno virtual y archivos.</p>
+<p><strong>Generado el:</strong> 2026-05-23 04:29:45 (America/Tegucigalpa)</p>
+</blockquote>
+<hr />
+<h2 id="usuario-2026-05-23-020102-americategucigalpa">👤 Usuario (2026-05-23 02:01:02 (America/Tegucigalpa))</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Cambie la ruta de casa del proyecto, me puedes confirmar cual es el directorio actual del proyecto?
+</span></code></pre></div>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-020105-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:01:05 (America/Tegucigalpa))</h2>
+<p>Hola. Sí, te confirmo que el directorio actual de tu proyecto es:</p>
+<p><code>c:\Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_(High)\ChronoAPI</code></p>
+<p>En este directorio se encuentran los siguientes archivos y carpetas principales:</p>
+<ul>
+<li><strong>Carpetas</strong>: <code>.venv</code>, <code>docs</code>, <code>templates</code>, <code>scripts</code></li>
+<li><strong>Archivos</strong>: <code>main.py</code>, <code>requirements.txt</code>, <code>.gitignore</code></li>
+</ul>
+<p>¿Hay algo más en lo que te pueda ayudar con respecto a este directorio o al proyecto?</p>
+<hr />
+<h2 id="usuario-2026-05-23-020257-americategucigalpa">👤 Usuario (2026-05-23 02:02:57 (America/Tegucigalpa))</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Organiza los fuentes, para que ahora esten dentro del directorio &quot;backend&quot; (o sea, mueve main.py, requirements.txt y templates), y adecua los scripts para que apunten a donde deben apuntar.
+</span></code></pre></div>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-020307-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:03:07 (America/Tegucigalpa))</h2>
+<p>He preparado un plan de implementación detallado para reorganizar el proyecto según tus requerimientos.</p>
+<p>Por favor, revisa el archivo del plan de implementación <a href="file:///C:/Users/nelbren/.gemini/antigravity/brain/54914d18-540f-4ec4-9f2e-948bcb752485/implementation_plan.md">implementation_plan.md</a>.</p>
+<p>No hay preguntas abiertas ni decisiones complejas pendientes, ya que el proceso de reubicación es directo y limpio.</p>
+<p>Quedo atento a tu aprobación explícita para comenzar a ejecutar la reorganización y adecuar los scripts.</p>
+<hr />
+<h2 id="usuario-2026-05-23-020441-americategucigalpa">👤 Usuario (2026-05-23 02:04:41 (America/Tegucigalpa))</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Procede con los cambios!
+</span></code></pre></div>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-020508-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:05:08 (America/Tegucigalpa))</h2>
+<p>I have initiated the process of creating the <code>backend</code> directory and moving the files (<code>main.py</code>, <code>requirements.txt</code>, and the <code>templates</code> directory) into it.</p>
+<p>Once the system completes the file move, I will proceed to:</p>
+<ol>
+<li>Update <code>backend/main.py</code> so that its path references to templates are dynamic and robust using <code>os.path.join</code>.</li>
+<li>Update the installation script (<code>scripts/install.bat</code>) to install requirements from <code>backend/requirements.txt</code>.</li>
+<li>Update the run script (<code>scripts/run.bat</code>) to start FastAPI pointing to <code>backend.main:app</code>.</li>
+</ol>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-020629-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:06:29 (America/Tegucigalpa))</h2>
+<p>I have executed the API query to test that the server is up and running. I am now waiting for the verification request to complete and show us the returned timestamp.</p>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-020635-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:06:35 (America/Tegucigalpa))</h2>
+<p>He completado exitosamente la reorganización del proyecto y la adecuación de los scripts.</p>
+<p>Aquí tienes un resumen de las acciones realizadas:</p>
+<ol>
+<li><strong>Creación del directorio <code>backend</code></strong>: Centraliza los fuentes del proyecto en <code>backend/</code>.</li>
+<li><strong>Reubicación de archivos</strong>:</li>
+<li><code>main.py</code> -&gt; <code>backend/main.py</code> (actualizado para cargar plantillas de forma dinámica y absoluta usando <code>os.path.join</code>).</li>
+<li><code>requirements.txt</code> -&gt; <code>backend/requirements.txt</code></li>
+<li><code>templates/</code> -&gt; <code>backend/templates/</code></li>
+<li><strong>Adecuación de los scripts</strong>:</li>
+<li><strong><code>scripts/install.bat</code></strong>: Actualizado para instalar dependencias desde <code>backend\requirements.txt</code>.</li>
+<li><strong><code>scripts/run.bat</code></strong>: Adaptado para lanzar <code>backend.main:app</code> con <code>uvicorn</code>.</li>
+<li><strong>Verificación</strong>: Levantamos el servidor en segundo plano de manera temporal y validamos que el endpoint <code>/api/timestamp</code> responde correctamente en la nueva ubicación.</li>
+</ol>
+<p>Puedes consultar todos los detalles de los cambios realizados y los resultados de las pruebas en el archivo del walkthrough: <a href="file:///C:/Users/nelbren/.gemini/antigravity/brain/54914d18-540f-4ec4-9f2e-948bcb752485/walkthrough.md">walkthrough.md</a>.</p>
+<p>¿Hay alguna otra modificación o ajuste que te gustaría realizar en los scripts o archivos?</p>
+<hr />
+<h2 id="usuario-2026-05-23-020811-americategucigalpa">👤 Usuario (2026-05-23 02:08:11 (America/Tegucigalpa))</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>c:\Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_(High)\ChronoAPI&gt;run
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>==============================================
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Iniciando Servidor ChronoAPI con FastAPI...
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>==============================================
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Iniciando uvicorn...
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Fatal error in launcher: Unable to create process using &#39;&quot;C:\Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_(High)\.venv\Scripts\python.exe&quot;  &quot;c:\Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_(High)\ChronoAPI\.venv\Scripts\uvicorn.exe&quot; backend.main:app --reload --host 127.0.0.1 --port 8000&#39;: El sistema no puede encontrar el archivo especificado.
+</span></code></pre></div>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-020836-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:08:36 (America/Tegucigalpa))</h2>
+<p>El error que experimentaste es un problema clásico y muy común en entornos virtuales (<code>.venv</code>) de Python en Windows cuando se mueve o renombra el directorio del proyecto.</p>
+<h3 id="causa-del-error">Causa del error</h3>
+<p>En Windows, cuando instalas paquetes que exponen comandos (como <code>uvicorn</code> o <code>pip</code>), se generan archivos ejecutables (<code>.exe</code>) de lanzamiento precompilados dentro de <code>.venv\Scripts\</code>. Estos archivos <code>.exe</code> contienen una ruta absoluta "hardcodeada" hacia el intérprete <code>python.exe</code> de cuando se creó el entorno por primera vez. Al cambiar el directorio principal del proyecto a <code>ChronoAPI/</code>, la ruta antigua dejó de existir, rompiendo los lanzadores <code>.exe</code> de <code>uvicorn</code> y <code>pip</code>.</p>
+<h3 id="solucion-implementada">Solución Implementada</h3>
+<p>Para solucionar esto de raíz y hacer que tus scripts sean <strong>completamente inmunes y robustos ante cambios de rutas y nombres de carpetas</strong>, he modificado los scripts del proyecto para utilizar el intérprete de Python directamente (<code>python -m &lt;modulo&gt;</code>) en lugar de llamar a los ejecutables wrappers:</p>
+<ol>
+<li><strong><code>scripts/run.bat</code></strong>:</li>
+</ol>
+<p>Se modificó el comando de arranque para usar el módulo de Python directamente:</p>
+<div class="language-bat highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">call</span> .venv\Scripts\python -m uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000
+</span></code></pre></div>
+<ol>
+<li><strong><code>scripts/install.bat</code></strong>:</li>
+</ol>
+<p>Se modificó el instalador para instalar las dependencias con <code>python -m pip</code> de la misma manera robusta:</p>
+<div class="language-bat highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python -m pip install -r backend\requirements.txt
+</span></code></pre></div>
+<p>El intérprete de Python de un entorno virtual no depende de rutas absolutas internas para ejecutarse, por lo que <strong>ahora tus comandos <code>run</code> e <code>install</code> funcionarán perfectamente sin importar si renombras o mueves la carpeta del proyecto en el futuro</strong>.</p>
+<p>He actualizado la documentación en el archivo del walkthrough: <a href="file:///C:/Users/nelbren/.gemini/antigravity/brain/54914d18-540f-4ec4-9f2e-948bcb752485/walkthrough.md">walkthrough.md</a>.</p>
+<p>Ya puedes volver a ejecutar <code>run</code> en tu terminal y el servidor iniciará de inmediato sin ningún problema.</p>
+<hr />
+<h2 id="usuario-2026-05-23-021036-americategucigalpa">👤 Usuario (2026-05-23 02:10:36 (America/Tegucigalpa))</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Adiciona otro boton al lado de &quot;Swagger UI Docs&quot; para lograr acceder a http://127.0.0.1:8000/redoc
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>O me indicas si hay alguna otra forma de llegar esa documentación por otro medio ya conocido, que nos sea escribiendo en la direccion del navegador: http://127.0.0.1:8000/redoc
+</span></code></pre></div>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-021050-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:10:50 (America/Tegucigalpa))</h2>
+<p>¡Excelente sugerencia! He implementado ambos métodos de acceso de forma muy elegante y premium para mejorar la experiencia de desarrollo.</p>
+<p>Aquí tienes los dos caminos que ahora puedes usar para acceder a la documentación interactiva de <strong>ReDoc</strong> sin necesidad de escribir la dirección manualmente en el navegador:</p>
+<hr />
+<h3 id="metodo-1-nuevo-boton-en-el-dashboard-recomendado">Método 1: Nuevo botón en el Dashboard (Recomendado)</h3>
+<p>He agregado un nuevo botón de navegación llamado <strong>"ReDoc Docs"</strong> en la barra superior (Header) del dashboard, justo al lado del botón de Swagger UI.</p>
+<ul>
+<li><strong>Diseño visual</strong>: Para conservar la estética premium y moderna (glassmorphic) del proyecto, se le ha aplicado un gradiente azul cobalto a índigo (<code>linear-gradient(135deg, #3b82f6, #1d4ed8)</code>) y un efecto de elevación suave (<code>hover</code>).</li>
+<li>Se abre automáticamente en una pestaña nueva para no interrumpir tu navegación en el dashboard.</li>
+</ul>
+<hr />
+<h3 id="metodo-2-enlace-cruzado-dentro-de-swagger-ui">Método 2: Enlace cruzado dentro de Swagger UI</h3>
+<p>¿Qué pasa si ya estás explorando los endpoints en Swagger y quieres pasarte a ReDoc?</p>
+<ul>
+<li><strong>Solución</strong>: He modificado la descripción de la aplicación FastAPI en <code>backend/main.py</code> para incluir un enlace dinámico en formato Markdown directo a <code>/redoc</code>.</li>
+<li><strong>Cómo llegar</strong>: Al ingresar a <code>http://127.0.0.1:8000/docs</code> (Swagger UI), verás en el subtítulo principal un enlace clicable que dice: <em>"También puedes acceder a la Documentación en ReDoc"</em>. Esto te permite saltar entre ambas herramientas con un solo clic.</li>
+</ul>
+<hr />
+<h3 id="detalles-del-codigo-editado">Detalles del Código Editado</h3>
+<ol>
+<li><strong><a href="file:///c:/Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_%28High%29/ChronoAPI/backend/templates/index.html">index.html</a></strong>:</li>
+</ol>
+<p>Se agregaron las reglas de estilo CSS para <code>.btn-redoc</code> y la etiqueta HTML en el contenedor <code>.nav-links</code>:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/redoc&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-nav btn-redoc&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    ReDoc Docs
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<ol>
+<li><strong><a href="file:///c:/Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_%28High%29/ChronoAPI/backend/main.py">main.py</a></strong>:</li>
+</ol>
+<p>Se actualizó el campo <code>description</code> al inicializar <code>FastAPI(...)</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">description</span><span class="o">=</span><span class="s2">&quot;API interactiva para consultar la fecha y hora del sistema en tiempo real. También puedes acceder a la [Documentación en ReDoc](/redoc).&quot;</span>
+</span></code></pre></div>
+<p>Toda la documentación detallada e historial de esta mejora ha sido registrada en el <a href="file:///C:/Users/nelbren/.gemini/antigravity/brain/54914d18-540f-4ec4-9f2e-948bcb752485/walkthrough.md">walkthrough.md</a>. ¡Listo para que pruebes los nuevos accesos directos!</p>
+<hr />
+<h2 id="usuario-2026-05-23-021327-americategucigalpa">👤 Usuario (2026-05-23 02:13:27 (America/Tegucigalpa))</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>El walkthroght.md donde esta? Reside en este proyecto o en otro lado o son cosas que se perderan como lagrimas en la lluvia?
+</span></code></pre></div>
+<hr />
+<h2 id="antigravity-ai-2026-05-23-021333-americategucigalpa">🤖 Antigravity AI (2026-05-23 02:13:33 (America/Tegucigalpa))</h2>
+<p>¡Para nada se perderán como lágrimas en la lluvia! 🦾🛸🌧️</p>
+<p>Los archivos de planificación y el walkthrough original residen por defecto en el directorio de la aplicación del asistente (<code>App Data Directory</code>), que está fuera de tu carpeta de trabajo diaria y podría ser menos accesible para ti.</p>
+<p>Para evitar que se pierdan o queden en el olvido, <strong>acabo de guardar una copia persistente del walkthrough directamente dentro de tu propio proyecto</strong>, en la ruta:</p>
+<p>📁 <strong><code>c:\Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_(High)\ChronoAPI\docs\walkthrough.md</code></strong></p>
+<p>De esta manera:</p>
+<ol>
+<li><strong>Es parte de tu proyecto</strong>: Está bajo tu control y se guardará junto con todos tus archivos.</li>
+<li><strong>Es visible para Git</strong>: Si haces un <code>git add</code> y un <code>commit</code>, quedará registrado en tu historial de Git para siempre, asegurando que cualquier miembro del equipo (o tu "yo del futuro") pueda entender exactamente qué cambios se hicieron en esta reorganización.</li>
+<li><strong>Editable</strong>: Puedes modificarlo, agregar notas o consultarlo directamente desde tu editor de código preferido (como VS Code) haciendo clic aquí: <a href="file:///c:/Testing_Antigravity_v2.0.1_Gemini_3.5_Flash_%28High%29/ChronoAPI/docs/walkthrough.md">walkthrough.md</a>.</li>
+</ol>
+<p><em>Todos esos momentos no se perderán en el tiempo...</em> 🕊️ ¿Hay algo más en lo que te pueda ayudar hoy?</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

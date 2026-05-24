@@ -1,0 +1,68 @@
+site_name: ChronoAPI - Historial y Planes
+site_description: Documentación oficial, planes de desarrollo e historial completo de conversaciones de ChronoAPI.
+
+theme:
+  name: material
+  language: es
+  palette:
+    # Esquema Oscuro (Predeterminado - Combina con el diseño glassmorphism de ChronoAPI)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+    # Esquema Claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+
+
+nav:
+  - Centro de Control: index.md
+  - Guía del Proyecto (README): readme.md
+  - Guía de Reorganización: walkthrough.md
+  - Plan de Implementación: plan/implementation_plan.md
+  - Historial de Chats:
+      - Índice del Historial: chat_history/index.md
+      - "01. Creación de Endpoints FastAPI (Date & Time)": chat_history/chat_5d102ccd-506f-4d7d-91e4-407b702c9c34.md
+      - "02. Confirmación de Ruta de Proyecto": chat_history/chat_54914d18-540f-4ec4-9f2e-948bcb752485.md
+      - "03. Documentación de Chats en Markdown": chat_history/chat_666388ec-2b15-4bc8-aa6e-984b2c199347.md
+      - "04. Readecuación de Scripts a scripts/backend/win": chat_history/chat_9d27139b-6121-4bb1-9c52-12f9ed7dd4d7.md
+      - "05. Exportador de Conversaciones Multi-Plataforma e Incremental": chat_history/chat_d8101e01-0b19-43ad-a09c-25d998f9ff89.md
+      - "06. export_conversations.py se encuentra dentro de scripts, me gustaria": chat_history/chat_aa9ab4f1-96a6-43e7-ba12-1c3dd0e095d8.md
+      - "07. [{": chat_history/chat_fae0d6a4-41b7-4c17-bff1-8189097bd94e.md
+      - "08. Probando la inclusión de imagenes en la exportación de los chats": chat_history/chat_d5e98b54-b2d7-40a0-bbc1-e510a1053460.md
+      - "09. Probando la inclusión de imagenes en la exportación de los chats (v2)": chat_history/chat_a22ce375-ccd2-44fe-a93d-7745919e0b21.md
+      - "10. Probando la inclusión de imagenes en la exportación de los chats (C": chat_history/chat_123652e4-555d-46d7-bdd9-2e3a79ebeb87.md
+      - "11. No esta funcionando la exportación de los chats que tienen imagenes": chat_history/chat_007bed24-aec7-404c-9ffb-7ed163d77ad8.md
+      - "12. Una ultima prueba en la inclusión de imagenes en el chat. 😎": chat_history/chat_8f4865c5-9272-4dae-be09-d0f596a5971f.md
+      - "13. Este proyecto muestra unas apis y documentación de las apis, existe": chat_history/chat_2f03faaf-fcd4-459f-b35b-d46f6b42a24c.md
+      - "14. Crea un README.md para el proyecto, en donde se indiquen los pasos": chat_history/chat_51c330ca-76bf-4606-abf6-85569b32f204.md
+      - "15. Realiza estos fixes": chat_history/chat_81371e1d-a1cd-4295-bd1d-8e28ef5b051c.md

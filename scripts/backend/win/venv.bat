@@ -2,7 +2,7 @@
 echo ==============================================
 echo Instalando Entorno Virtual y Dependencias...
 echo ==============================================
-cd /d "%~dp0.."
+cd /d "%~dp0..\..\.."
 
 :: Verificar si python está instalado
 python --version >nul 2>&1
@@ -13,16 +13,16 @@ if errorlevel 1 (
 )
 
 :: Crear entorno virtual si no existe
-if not exist .venv (
-    echo Creando entorno virtual .venv...
-    python -m venv .venv
+if not exist backend\.venv (
+    echo Creando entorno virtual backend\.venv...
+    python -m venv backend\.venv
 ) else (
-    echo El entorno virtual .venv ya existe.
+    echo El entorno virtual backend\.venv ya existe.
 )
 
 :: Activar e instalar requerimientos
 echo Instalando dependencias desde requirements.txt...
-call .venv\Scripts\activate
+call backend\.venv\Scripts\activate
 python -m pip install --upgrade pip
 python -m pip install -r backend\requirements.txt
 

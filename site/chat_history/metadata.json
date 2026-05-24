@@ -1,0 +1,62 @@
+{
+    "007bed24-aec7-404c-9ffb-7ed163d77ad8": {
+        "title": "No esta funcionando la exportación de los chats que tienen imagenes..",
+        "description": "No esta funcionando la exportación de los chats que tienen imagenes, el producto de las imagenes es un markdown, por ejemplo: $ cat media__1779595352915.png ..."
+    },
+    "123652e4-555d-46d7-bdd9-2e3a79ebeb87": {
+        "title": "Probando la inclusión de imagenes en la exportación de los chats (C..",
+        "description": "Probando la inclusión de imagenes en la exportación de los chats (Claude Sonet 4.6 (Thinking))"
+    },
+    "2f03faaf-fcd4-459f-b35b-d46f6b42a24c": {
+        "title": "Este proyecto muestra unas apis y documentación de las apis, existe..",
+        "description": "Este proyecto muestra unas apis y documentación de las apis, existe alguna forma de renderizar directamente los documentos markdown con FastAPI u otro modulo..."
+    },
+    "51c330ca-76bf-4606-abf6-85569b32f204": {
+        "title": "Crea un README.md para el proyecto, en donde se indiquen los pasos ..",
+        "description": "Crea un README.md para el proyecto, en donde se indiquen los pasos necesarios para instalar y ejecutar el proyecto. Ademas, explique las caracteristicas del ..."
+    },
+    "54914d18-540f-4ec4-9f2e-948bcb752485": {
+        "title": "Confirmación de Ruta de Proyecto",
+        "description": "Confirmar la ruta de inicio actual del proyecto ChronoAPI y verificar la estructura del entorno virtual y archivos."
+    },
+    "5d102ccd-506f-4d7d-91e4-407b702c9c34": {
+        "title": "Creación de Endpoints FastAPI (Date & Time)",
+        "description": "Creación de una API REST con FastAPI con tres endpoints (/date, /time, /timestamp), diseño premium del frontend y enlaces a Swagger UI y ReDoc."
+    },
+    "666388ec-2b15-4bc8-aa6e-984b2c199347": {
+        "title": "Documentación de Chats en Markdown",
+        "description": "Consulta sobre cómo exportar e instrumentar el guardado automático de todas las pláticas de la sesión en formato Markdown (.md)."
+    },
+    "81371e1d-a1cd-4295-bd1d-8e28ef5b051c": {
+        "title": "Realiza estos fixes:",
+        "description": "Realiza estos fixes: [{ \"resource\": \"/Users/nelbren/ChronoAPI/backend/main.py\", \"owner\": \"_generated_diagnostic_collection_name_#4\", \"code\": \"E501\", \"severit..."
+    },
+    "8f4865c5-9272-4dae-be09-d0f596a5971f": {
+        "title": "Una ultima prueba en la inclusión de imagenes en el chat. 😎",
+        "description": "Una ultima prueba en la inclusión de imagenes en el chat. 😎"
+    },
+    "9d27139b-6121-4bb1-9c52-12f9ed7dd4d7": {
+        "title": "Readecuación de Scripts a scripts/backend/win",
+        "description": "Crear el directorio scripts/backend/win, mover archivos batch de Windows allí y readecuar las rutas relativas en scripts y backend/main.py."
+    },
+    "a22ce375-ccd2-44fe-a93d-7745919e0b21": {
+        "title": "Probando la inclusión de imagenes en la exportación de los chats (v2)",
+        "description": "Probando la inclusión de imagenes en la exportación de los chats (v2)"
+    },
+    "aa9ab4f1-96a6-43e7-ba12-1c3dd0e095d8": {
+        "title": "export_conversations.py se encuentra dentro de scripts, me gustaria..",
+        "description": "export_conversations.py se encuentra dentro de scripts, me gustaria organizarlo mejor, que directorio debajo de scripts, seria conveniente para este programa..."
+    },
+    "d5e98b54-b2d7-40a0-bbc1-e510a1053460": {
+        "title": "Probando la inclusión de imagenes en la exportación de los chats",
+        "description": "Probando la inclusión de imagenes en la exportación de los chats"
+    },
+    "d8101e01-0b19-43ad-a09c-25d998f9ff89": {
+        "title": "Exportador de Conversaciones Multi-Plataforma e Incremental",
+        "description": "Hacer el script export_conversations.py multi-plataforma (macOS/Windows), separar tareas de exportación y generación del índice (TOC) para soporte incremental, e incluir indicadores de OS."
+    },
+    "fae0d6a4-41b7-4c17-bff1-8189097bd94e": {
+        "title": "[{",
+        "description": "[{ \"resource\": \"/Users/nelbren/ChronoAPI/scripts/chats/gemini/export_conversations.py\", \"owner\": \"_generated_diagnostic_collection_name_#6\", \"code\": \"F401\", ..."
+    }
+}
